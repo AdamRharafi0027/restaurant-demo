@@ -1,7 +1,10 @@
-const page = () => {
+import Hero from "@/sections/Hero/Hero";
+
+const Home = () => {
     return (
         <>
-            <h1>hello World</h1>
+            <Hero />
         </>
     );
 }
+export default Home;
