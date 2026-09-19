@@ -1,9 +1,11 @@
-import Hero from "@/sections/Hero/Hero";
+import HeroSection from "@/sections/HomeSections/HeroSection/HeroSection";
+import MenuSection from "@/sections/HomeSections/MenuSection/MenuSection";
 
 const Home = () => {
     return (
         <>
-            <Hero />
+            <HeroSection />
+            <MenuSection />
         </>
     );
 }

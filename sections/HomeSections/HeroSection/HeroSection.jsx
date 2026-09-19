@@ -1,9 +1,9 @@
 import MainButton from "@/components/MainButton";
 import { Star } from "lucide-react";
 import Image from "next/image";
-import heroImage from "../../public/hero/hero.avif";
+import heroImage from "../../../public/hero/hero.avif";
 
-const Hero = () => {
+const HeroSection = () => {
   const heroFeatures = [
     {
       title: "Fresh Ingredients",
@@ -20,7 +20,7 @@ const Hero = () => {
   ];
   return (
     <>
-      <section className="bg-warm-bg w-full flex items-center px-8 flex-col-reverse lg:flex-row gap-15 mb-20 justify-between">
+      <section className="bg-gray-50  w-full flex items-center px-8 flex-col-reverse lg:flex-row gap-15 pb-10 mb-10 justify-between">
         {/* Texts Side */}
         <aside className="lg:pt-20">
           <div className="flex items-center gap-2 bg-orange-100 rounded-2xl w-60 px-3 py-1 text-orange-500 uppercase font-bold  text-[15px]">
@@ -101,4 +101,4 @@ const Hero = () => {
  2: https://images.unsplash.com/photo-1761515397109-ba896074a139?w=900&h=700&fit=crop&auto=format&q=80
  3: https://images.unsplash.com/photo-1780805664675-d478703ae915?w=900&h=700&fit=crop&auto=format&q=80
 */
-export default Hero;
+export default HeroSection;
