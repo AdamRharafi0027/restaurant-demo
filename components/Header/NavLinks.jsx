@@ -9,19 +9,19 @@ const NavLinks = [
     },
     {
         linkName: "Offers",
-        href: "/offers",
+        href: "#offers",
     },
     {
         linkName: "About",
-        href: "/about",
+        href: "#about",
     },
     {
         linkName: "Locations",
-        href: "/locations",
+        href: "#locations",
     },
     {
         linkName: "Contact",
-        href: "/contact",
+        href: "#contact",
     },
 
 ]

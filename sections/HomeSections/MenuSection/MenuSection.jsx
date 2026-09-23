@@ -8,11 +8,12 @@ import Link from "next/link";
 import { useState } from "react";
 
 const MenuSection = () => {
+   
   const [activeCategory, setActiveCategory] = useState("burgers");
   const previewProducts = ProductsData.filter(product=> product.category === activeCategory)
   return (
     <>
-      <section className="bg-white px-3 text-center lg:px-10">
+      <section id="menu" className="scroll-mt-20 bg-white px-3 text-center lg:px-10">
         {/* header */}
         <div className="flex flex-col lg:flex-row lg:justify-between text-left">
           <div>

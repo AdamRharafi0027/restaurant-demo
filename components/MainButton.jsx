@@ -1,11 +1,21 @@
-const MainButton = ({children, className, onclick}) => {
-  return (
-    <button className={`rounded-md font-bold py-3 cursor-pointer ${className}`}
-        onClick={onclick}
-    >
-        {children}
-    </button>
-  )
-}
+const MainButton = ({
+  children,
+  className,
+  onClick,
+  onclick,
+  type = "button",
+}) => {
+  const handleClick = onClick ?? onclick;
 
-export default MainButton
+  return (
+    <button
+      type={type}
+      className={`rounded-md font-bold py-3 cursor-pointer ${className}`}
+      onClick={handleClick}
+    >
+      {children}
+    </button>
+  );
+};
+
+export default MainButton;

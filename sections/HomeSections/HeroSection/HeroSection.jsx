@@ -4,23 +4,9 @@ import Image from "next/image";
 import heroImage from "../../../public/hero/hero.avif";
 
 const HeroSection = () => {
-  const heroFeatures = [
-    {
-      title: "Fresh Ingredients",
-      icon: "🌿",
-    },
-    {
-      title: "Fast Preparation",
-      icon: "⚡",
-    },
-    {
-      title: "Pickup & Delivery",
-      icon: "🛵",
-    },
-  ];
   return (
     <>
-      <section className="bg-gray-50  w-full flex items-center px-8 flex-col-reverse lg:flex-row gap-15 pb-10 mb-10 justify-between">
+      <section className="bg-gray-50  w-full flex items-center px-8 flex-col-reverse lg:flex-row gap-15 pb-10 mb-10 justify-between mt-15">
         {/* Texts Side */}
         <aside className="lg:pt-20">
           <div className="flex items-center gap-2 bg-orange-100 rounded-2xl w-60 px-3 py-1 text-orange-500 uppercase font-bold  text-[15px]">
@@ -57,7 +43,20 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="flex flex-wrap  gap-5">
-            {heroFeatures.map((item, index) => {
+            {[
+              {
+                title: "Fresh Ingredients",
+                icon: "🌿",
+              },
+              {
+                title: "Fast Preparation",
+                icon: "⚡",
+              },
+              {
+                title: "Pickup & Delivery",
+                icon: "🛵",
+              },
+            ].map((item, index) => {
               return (
                 <div key={index} className="flex gap-2">
                   {item.icon}
@@ -71,24 +70,23 @@ const HeroSection = () => {
         <aside className="relative lg:w-full lg:h-screen">
           <Image src={heroImage} width={1200} height={900} alt="hero Image" />
           <div className="absolute bottom-6 left-6 lg:bottom-45 lg:left-10 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg ring-1 ring-black/5">
-  <div className="flex items-center gap-2">
-    <span className="text-2xl font-extrabold leading-none text-gray-900">
-      4.9
-    </span>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl font-extrabold leading-none text-gray-900">
+                4.9
+              </span>
 
-    <Star
-      size={18}
-      fill="currentColor"
-      className="text-yellow-400"
-      strokeWidth={1.5}
-    />
-  </div>
+              <Star
+                size={18}
+                fill="currentColor"
+                className="text-yellow-400"
+                strokeWidth={1.5}
+              />
+            </div>
 
-  <p className="mt-1 text-[11px] font-medium text-gray-500">
-    2,400+ orders
-  </p>
-</div>
-
+            <p className="mt-1 text-[11px] font-medium text-gray-500">
+              2,400+ orders
+            </p>
+          </div>
         </aside>
       </section>
     </>

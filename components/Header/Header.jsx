@@ -9,9 +9,26 @@ import { usePathname } from 'next/navigation';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 const pathname = usePathname();
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleNavClick = (event, link) => {
+    setIsOpen(false);
+
+    if (link.href.startsWith("#")) {
+      event.preventDefault();
+      scrollToSection(link.href.substring(1));
+    }
+  };
   return (
     <>
-      <header className="flex px-4 py-4 justify-between items-center relative border-b border-gray-300">
+      <header className="flex px-4 py-4 justify-between items-center fixed border-b border-gray-300 z-50 w-full bg-white">
         {/* LOGO */}
         <Link href={"/"} className="flex items-center gap-2 group">
           <div className="w-10 h-10 bg-orange-500 rounded-md flex items-center justify-center">
@@ -30,7 +47,7 @@ const pathname = usePathname();
           {NavLinks.map((link, index) => {
             return (
               <ul key={index} className=" p-3 rounded-sm hover:bg-gray-50 transition-all hover:text-orange-500">
-                <Link href={link.href} onClick={() => setIsOpen(false)}>
+                <Link href={link.href} onClick={(event) => handleNavClick(event, link)}>
                   {link.linkName}
                 </Link>
               </ul>
@@ -49,7 +66,7 @@ const pathname = usePathname();
               <ul key={index} className="text-gray-600 p-3 rounded-sm hover:bg-gray-50 transition-all hover:text-orange-500">
                 <Link 
                 href={link.href} 
-                onClick={() => setIsOpen(false)}
+                onClick={(event) => handleNavClick(event, link)}
                 className={`${link.href === pathname && "text-orange-500"}`}
                 >
                   {link.linkName}
@@ -72,9 +89,11 @@ const pathname = usePathname();
         <button className="block lg:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X /> : <Menu />}
         </button>
+       <Link href={"/menu"}>
         <MainButton className={"bg-orange-500 text-white hidden lg:block px-3 py-2! hover:bg-orange-600"}>
             Order Now
           </MainButton>
+       </Link>
         </div>
       </header>
     </>

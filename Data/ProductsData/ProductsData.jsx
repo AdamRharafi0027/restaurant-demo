@@ -1,3 +1,7 @@
+const img = (id, w = 800, h = 600) => {
+  return `https://images.unsplash.com/${id}?w=${w}&h=${h}&fit=crop&auto=format&q=80`;
+}
+export const RESTAURANT_IMAGE_1 = img('photo-1761515397109-ba896074a139', 900, 700);
 const ProductsData = [
   // Burgers
   {
