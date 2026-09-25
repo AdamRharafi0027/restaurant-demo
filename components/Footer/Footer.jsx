@@ -77,7 +77,7 @@ const Footer = () => {
 
           {/* Contact + Hours */}
           <div>
-            <h4 className="font-display font-bold text-sm uppercase tracking-widest text-gray-400 mb-4">Find Us</h4>
+            <h4 className=" font-bold text-sm uppercase tracking-widest text-gray-400 mb-4">Find Us</h4>
             <ul className="space-y-3">
               <li className="text-gray-400 text-sm font-body">
                 <span className="block text-white font-medium text-xs uppercase tracking-wide mb-1">Address</span>

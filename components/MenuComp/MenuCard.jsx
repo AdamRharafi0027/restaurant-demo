@@ -1,6 +1,10 @@
+'use client'
 import Image from "next/image";
 import MainButton from "../MainButton";
 import { PlusIcon } from "lucide-react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/ProductSlice/ProductSlice";
+
 
 const MenuCard = ({ image, title, description, price, product }) => {
   const ProductTags = {
@@ -8,6 +12,12 @@ const MenuCard = ({ image, title, description, price, product }) => {
     NEW: "bg-black text-white",
     HOT: "bg-red-500 text-white",
   };
+  const dispatch = useDispatch();
+
+  const handleAddProduct = (product) => {
+    dispatch(addToCart(product));
+  }
+
   return (
     <div className="bg-white rounded-lg overflow-hidden border border-gray-200 group hover:shadow-md transition-shadow duration-200">
       <div className="relative bg-gray-100 overflow-hidden cursor-pointer">
@@ -41,7 +51,9 @@ const MenuCard = ({ image, title, description, price, product }) => {
             {price} MAD
           </span>
 
-          <MainButton className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-display font-bold px-3 py-1.5 rounded transition-colors">
+          <MainButton 
+          onclick={()=>handleAddProduct(product)}
+          className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-display font-bold px-3 py-1.5 rounded transition-colors">
             <PlusIcon />
           </MainButton>
         </div>

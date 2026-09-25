@@ -5,10 +5,17 @@ import { useState } from "react";
 import NavLinks from "./NavLinks";
 import MainButton from "../MainButton";
 import { usePathname } from 'next/navigation';
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-const pathname = usePathname();
+  const pathname = usePathname();
+  const cartCount = useSelector((state) =>
+    state.ProductCart.ProductCart.reduce(
+      (total, item) => total + (item.quantity ?? 1),
+      0,
+    ),
+  );
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -28,7 +35,7 @@ const pathname = usePathname();
   };
   return (
     <>
-      <header className="flex px-4 py-4 justify-between items-center fixed border-b border-gray-300 z-50 w-full bg-white">
+      <header className="flex px-4 py-4 justify-between items-center fixed border-b border-gray-300 z-50 w-full bg-white lg:px-50">
         {/* LOGO */}
         <Link href={"/"} className="flex items-center gap-2 group">
           <div className="w-10 h-10 bg-orange-500 rounded-md flex items-center justify-center">
@@ -82,9 +89,21 @@ const pathname = usePathname();
           <Link
           href={"/cart"}
           className="relative p-2 hover:bg-warm-bg rounded-lg transition-colors"
-          aria-label="cart"
+          aria-label={
+            cartCount > 0
+              ? `Cart, ${cartCount} ${cartCount === 1 ? "item" : "items"}`
+              : "Cart"
+          }
         >
           <ShoppingCart />
+          {cartCount > 0 && (
+            <span
+              aria-hidden="true"
+              className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full border-2 border-white bg-orange-500 px-1 text-[10px] font-bold leading-none text-white"
+            >
+              {cartCount}
+            </span>
+          )}
         </Link>
         <button className="block lg:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X /> : <Menu />}
