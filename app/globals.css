@@ -3,3 +3,12 @@
 html {
   scroll-behavior: smooth !important;
 }
+
+@theme {
+
+  --color-brand-black: #111111;
+  --color-warm-bg: #FAF9F7;
+  --color-warm-border: #E5DED4;
+  --color-orange: #F97316;
+  --color-brand-red: #DC2626;
+}

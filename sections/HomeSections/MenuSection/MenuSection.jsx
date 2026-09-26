@@ -60,9 +60,11 @@ const MenuSection = () => {
             />
           ))}
         </div>
+        <Link href={"/menu"}>
         <MainButton className={" mt-8 border border-gray-300 hover:hover:bg-gray-50 px-10 "}>
           See Full Menu
         </MainButton>
+        </Link>
       </section>
     </>
   );
