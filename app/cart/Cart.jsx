@@ -21,9 +21,25 @@ const Cart = () => {
   const orderDetails = items
     .map((item) => `${item.quantity ?? 1} x ${item.title}`)
     .join("\n");
-  const whatsappUrl = `https://wa.me/212600000000?text=${encodeURIComponent(
-    `Hello Bite House, I'd like to order:\n${orderDetails}\n\nItems total: ${formatPrice(subtotal)}`,
-  )}`;
+  // const whatsappUrl = `https://wa.me/212774976532?text=${encodeURIComponent(
+  //   `Hello Bite House, I'd like to order:\n${orderDetails}\n\nItems total: ${formatPrice(subtotal)}`,
+  // )}`;
+  const whatsappUrl = `https://wa.me/212774976532?text=${encodeURIComponent(
+  `🍔 *New Order – Bite House*
+
+Hello Bite House! 👋
+
+I'd like to place the following order:
+
+${orderDetails}
+
+💰 *Items total:* ${formatPrice(subtotal)}
+
+Please confirm my order and let me know the estimated preparation time.
+
+Thank you! 🙏`
+)}`;
+
 
   if (items.length === 0) {
     return (

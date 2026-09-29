@@ -21,7 +21,7 @@ const Footer = () => {
               Your neighborhood spot for premium fast food.
             </p>
             <a
-              href="https://wa.me/212600000000"
+              href="https://wa.me/212774976532"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-display font-bold text-sm px-4 py-2.5 rounded-lg transition-colors"
@@ -90,8 +90,8 @@ const Footer = () => {
                 Mon – Sun: 11:00 – 23:00
               </li>
               <li>
-                <a href="tel:+212600000000" className="text-gray-400 hover:text-orange-500 text-sm font-body transition-colors">
-                  +212 600 000 000
+                <a href="tel:+212774976532" className="text-gray-400 hover:text-orange-500 text-sm font-body transition-colors">
+                  +212 774 976 532
                 </a>
               </li>
             </ul>
