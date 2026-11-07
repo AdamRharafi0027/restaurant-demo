@@ -72,7 +72,7 @@ const Header = () => {
         }
         {/* Desktop Menu */}
         <nav className="hidden fixed bg-white inset-0 top-15 w-full h-115 lg:flex flex-col gap-3 px-3 py-5 lg:sticky lg:flex-row lg:h-auto lg:w-auto lg:p-0">
-		<ul>
+		<ul className="list-none flex">
 		  {NavLinks.map((link, index) => {
             return (
               <li key={index} className="text-gray-600 p-3 rounded-sm hover:bg-gray-50 transition-all hover:text-orange-600">
