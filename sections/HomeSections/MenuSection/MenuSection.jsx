@@ -18,7 +18,7 @@ const MenuSection = () => {
         <div className="flex flex-col lg:flex-row lg:justify-between text-left">
           <div>
             <h1 className="text-4xl font-bold">Our Menu</h1>
-          <h3 className="my-2 text-gray-600">Everything made to order, every time.</h3>
+          <h2 className="my-2 text-gray-600">Everything made to order, every time.</h2>
           </div>
         <Link href={"/menu"} className="flex text-orange-600 font-bold items-center gap-2 cursor-pointer">
           Full Menu <MoveRight />

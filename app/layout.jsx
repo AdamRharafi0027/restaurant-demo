@@ -6,7 +6,7 @@ import StoreProvider from "@/components/StoreProvider";
 
 const outfit = Outfit({
   subsets: ['latin'],
-  weight: ['400', '500', '700', '900'], 
+  weight: ['400', '500', '700', '900'],
   display: 'swap',
 });
 
@@ -20,11 +20,14 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${outfit.className} h-full antialiased`}
+	  data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col">
         <StoreProvider>
           <Header />
-          {children}
+          <main>
+			{children}
+		  </main>
           <Footer />
         </StoreProvider>
         </body>

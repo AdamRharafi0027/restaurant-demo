@@ -13,7 +13,7 @@ const MainButton = ({
     <button
       type={type}
       name={name}
-      className={`rounded-md font-bold py-3 cursor-pointer ${className}`}
+      className={`rounded-md font-bold py-3 px-2 cursor-pointer ${className}`}
       onClick={handleClick}
 	  aria-label={ariaLabel}
     >
