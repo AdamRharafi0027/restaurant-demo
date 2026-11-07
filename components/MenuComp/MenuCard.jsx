@@ -51,8 +51,10 @@ const MenuCard = ({ image, title, description, price, product }) => {
             {price} MAD
           </span>
 
-          <MainButton 
+          <MainButton
           onclick={()=>handleAddProduct(product)}
+		  ariaLabel={`Add ${title.slice(0,5)}to cart`}
+          name={"add to cart"}
           className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-display font-bold px-3 py-1.5 rounded transition-colors">
             <PlusIcon />
           </MainButton>

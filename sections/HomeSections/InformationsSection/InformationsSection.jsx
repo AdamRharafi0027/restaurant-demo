@@ -115,6 +115,7 @@ const InformationsSection = () => {
                     />
                   </div>
                   <MainButton
+				  ariaLabel={"Message"}
                     type="submit"
                     className="w-full bg-orange-500 hover:bg-orange-600 text-white font-display font-bold py-3 rounded-lg transition-colors"
                   >

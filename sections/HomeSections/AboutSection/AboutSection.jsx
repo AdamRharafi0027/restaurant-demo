@@ -1,4 +1,5 @@
 import { RESTAURANT_IMAGE_1 } from "@/Data/ProductsData/ProductsData"
+import Image from "next/image"
 
 const AboutSection = () => {
   return (
@@ -39,10 +40,12 @@ const AboutSection = () => {
             </div>
 
             <div className="relative">
-              <img
+              <Image
                 src={RESTAURANT_IMAGE_1}
                 alt="Bite House restaurant interior"
-                className="w-full rounded-xl object-cover h-72 sm:h-96"
+				width={150}
+				height={100}
+				className="w-150 h-auto rounded-xl object-cover sm:h-96"
               />
               <div className="absolute -bottom-4 -left-4 bg-orange-500 text-white rounded-xl p-4 shadow-lg">
                 <div className="font-display font-black text-2xl leading-none">Since</div>

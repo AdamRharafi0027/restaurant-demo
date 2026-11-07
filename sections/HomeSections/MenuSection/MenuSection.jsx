@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const MenuSection = () => {
-   
+
   const [activeCategory, setActiveCategory] = useState("burgers");
   const previewProducts = ProductsData.filter(product=> product.category === activeCategory)
   return (
@@ -29,6 +29,7 @@ const MenuSection = () => {
           {categories.map((category, index) => {
             return (
               <MainButton
+			  ariaLabel={"Categories"}
                 className={
                   `rounded-full! px-2 lg:px-8 border  transition-all
                   ${activeCategory === category.id
@@ -47,7 +48,6 @@ const MenuSection = () => {
           })}
         </div>
         {/* menu cards */}
-        {/* <div className="flex flex-wrap gap-3"> */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {previewProducts.map((product) => (
             <MenuCard
@@ -61,7 +61,7 @@ const MenuSection = () => {
           ))}
         </div>
         <Link href={"/menu"}>
-        <MainButton className={" mt-8 border border-gray-300 hover:hover:bg-gray-50 px-10 "}>
+        <MainButton ariaLabel={"menu"} className={" mt-8 border border-gray-300 hover:hover:bg-gray-50 px-10 "}>
           See Full Menu
         </MainButton>
         </Link>

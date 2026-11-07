@@ -1,7 +1,5 @@
 import MainButton from "@/components/MainButton";
-import { Star } from "lucide-react";
 import Image from "next/image";
-import heroImage from "../../../public/hero/hero.avif";
 import Link from "next/link";
 
 const HeroSection = () => {
@@ -28,6 +26,7 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-3 mb-10">
               <Link href={"/menu"}>
               <MainButton
+			  ariaLabel={"Order Button"}
                 className="bg-orange-500 hover:bg-orange-600 text-white font-display font-bold text-base px-6 py-3.5 rounded-lg transition-colors"
               >
                 Order Now
@@ -35,6 +34,7 @@ const HeroSection = () => {
               </Link>
               <Link href={"/menu"}>
               <MainButton
+			  ariaLabel={"Menu"}
                 className="border border-warm-border bg-white hover:bg-warm-bg text-brand-black font-display font-bold text-base px-6 py-3.5 rounded-lg transition-colors"
               >
                 View Menu
@@ -59,9 +59,13 @@ const HeroSection = () => {
 
           {/* Right: Photo */}
           <div className="relative order-1 md:order-2 h-64 sm:h-80 md:h-auto">
-            <img
+            <Image
               src={`https://images.unsplash.com/photo-1678110707493-8d05425137ac?w=1200&h=900&fit=crop&auto=format&q=80`}
               alt="Bite House signature smash burger"
+			  width={500}
+			  height={200}
+			  priority={true}
+			  quality={90}
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-l from-transparent to-warm-bg/20" />
@@ -79,7 +83,7 @@ const HeroSection = () => {
 };
 
 /*
- Hero Image links : 
+ Hero Image links :
  1: https://images.unsplash.com/photo-1678110707493-8d05425137ac?w=1200&h=900&fit=crop&auto=format&q=80
  2: https://images.unsplash.com/photo-1761515397109-ba896074a139?w=900&h=700&fit=crop&auto=format&q=80
  3: https://images.unsplash.com/photo-1780805664675-d478703ae915?w=900&h=700&fit=crop&auto=format&q=80

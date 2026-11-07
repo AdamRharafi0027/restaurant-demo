@@ -82,6 +82,7 @@ const DisplayProduct = ({
                     key={category.id}
                     type="button"
                     onClick={() => setActiveCategory(category.id)}
+					aria-label="Categories"
                     className="flex items-center gap-2 p-3 rounded-lg border border-gray-200 bg-gray-50 hover:border-orange-300 hover:bg-orange-50 transition-colors text-left group"
                   >
                     <span className="text-xl">{category.icon}</span>

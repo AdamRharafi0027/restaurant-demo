@@ -65,6 +65,7 @@ const Footer = () => {
                 <li key={cat.id}>
                   <Link href={"/menu"}>
                   <MainButton
+				  ariaLabel={"categories"}
                     className="text-gray-400 hover:text-orange-500 text-sm font-body transition-colors flex items-center gap-2"
                   >
                     <span>{cat.icon}</span> {cat.label}

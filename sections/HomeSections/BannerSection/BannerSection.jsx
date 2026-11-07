@@ -13,6 +13,7 @@ const BannerSection = () => {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <MainButton
+			ariaLabel={"Order Button"}
               className="bg-orange-500 hover:bg-orange-600 text-white font-display font-bold px-7 py-3.5 rounded-lg transition-colors"
             >
               Order Now

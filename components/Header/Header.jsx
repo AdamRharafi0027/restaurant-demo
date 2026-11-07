@@ -51,16 +51,18 @@ const Header = () => {
           // Mobile Menu
           isOpen && (
             <nav className="fixed bg-white inset-0 top-15 w-full h-115 flex flex-col gap-3 px-3 py-5">
+			<ul>
           {NavLinks.map((link, index) => {
             return (
-              <ul key={index} className=" p-3 rounded-sm hover:bg-gray-50 transition-all hover:text-orange-500">
+              <li key={index} className=" p-3 rounded-sm hover:bg-gray-50 transition-all hover:text-orange-500">
                 <Link href={link.href} onClick={(event) => handleNavClick(event, link)}>
                   {link.linkName}
                 </Link>
-              </ul>
+              </li>
             );
-          })}
-          <MainButton className={"bg-orange-500 text-white lg:absolute"}>
+		})}
+		</ul>
+          <MainButton ariaLabel={"Order Button"} className={"bg-orange-500 text-white lg:absolute"}>
             Order Now
           </MainButton>
         </nav>
@@ -71,8 +73,8 @@ const Header = () => {
           {NavLinks.map((link, index) => {
             return (
               <ul key={index} className="text-gray-600 p-3 rounded-sm hover:bg-gray-50 transition-all hover:text-orange-500">
-                <Link 
-                href={link.href} 
+                <Link
+                href={link.href}
                 onClick={(event) => handleNavClick(event, link)}
                 className={`${link.href === pathname && "text-orange-500"}`}
                 >
@@ -81,7 +83,7 @@ const Header = () => {
               </ul>
             );
           })}
-          <MainButton className={"bg-orange-500 text-white lg:hidden hover:bg-orange-600"}>
+          <MainButton ariaLabel={"Order Button"} className={"bg-orange-500 text-white lg:hidden hover:bg-orange-600"}>
             Order Now
           </MainButton>
         </nav>
@@ -105,11 +107,11 @@ const Header = () => {
             </span>
           )}
         </Link>
-        <button className="block lg:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button className="block lg:hidden" name="menu" onClick={() => setIsOpen(!isOpen)} aria-label="Menu Button">
           {isOpen ? <X /> : <Menu />}
         </button>
        <Link href={"/menu"}>
-        <MainButton className={"bg-orange-500 text-white hidden lg:block px-3 py-2! hover:bg-orange-600"}>
+        <MainButton ariaLabel={"Order Button"} className={"bg-orange-500 text-white hidden lg:block px-3 py-2! hover:bg-orange-600"}>
             Order Now
           </MainButton>
        </Link>

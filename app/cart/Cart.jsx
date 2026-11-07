@@ -7,6 +7,8 @@ import {
   removeFromCart,
   updateCartQuantity,
 } from "@/ProductSlice/ProductSlice";
+import { useState } from "react";
+import Image from "next/image";
 
 const formatPrice = (price) => `${price} MAD`;
 
@@ -24,6 +26,9 @@ const Cart = () => {
   // const whatsappUrl = `https://wa.me/212774976532?text=${encodeURIComponent(
   //   `Hello Bite House, I'd like to order:\n${orderDetails}\n\nItems total: ${formatPrice(subtotal)}`,
   // )}`;
+  // ===== ADDED =====
+  const [userNumber, setUserNumber] = useState('0774976532');
+  // ==========
   const whatsappUrl = `https://wa.me/212774976532?text=${encodeURIComponent(
   `🍔 *New Order – Bite House*
 
@@ -36,10 +41,14 @@ ${orderDetails}
 💰 *Items total:* ${formatPrice(subtotal)}
 
 Please confirm my order and let me know the estimated preparation time.
+${userNumber !== null ?  ("Number : " + userNumber) : ("")}
 
 Thank you! 🙏`
 )}`;
 
+const handleAddComand = ()=> {
+  alert("command");
+}
 
   if (items.length === 0) {
     return (
@@ -96,7 +105,7 @@ Thank you! 🙏`
                   key={item.id}
                   className="flex gap-4 py-5 first:pt-0 sm:gap-6"
                 >
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.title}
                     className="h-24 w-24 shrink-0 rounded-md bg-gray-200 object-cover sm:h-28 sm:w-28"
@@ -198,7 +207,7 @@ Thank you! 🙏`
             </div>
 
             <a
-              href={whatsappUrl}
+              href={()=>handleAddComand()} // whatsappUrl
               target="_blank"
               rel="noopener noreferrer"
               className="mt-5 flex w-full items-center justify-center rounded-md bg-green-600 px-4 py-3.5 text-sm font-bold text-white transition-colors hover:bg-green-700"
@@ -212,7 +221,7 @@ Thank you! 🙏`
               Continue shopping
             </Link>
             <p className="mt-4 text-center text-xs leading-5 text-gray-500">
-              Your message will include these items and their total.
+              Your message will include these items and their total and Your number phone.
             </p>
           </aside>
         </div>

@@ -27,6 +27,7 @@ const SearchFilter = ({
         <div className="flex gap-2 flex-wrap">
           {categories.map((cat) => (
             <MainButton
+			ariaLabel={"categories"}
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
               className={`rounded-full px-2 lg:px-5 border lg:text-[15px] transition-all ${
