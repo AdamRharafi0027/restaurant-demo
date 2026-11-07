@@ -20,8 +20,9 @@ const MenuSection = () => {
             <h1 className="text-4xl font-bold">Our Menu</h1>
           <h3 className="my-2 text-gray-600">Everything made to order, every time.</h3>
           </div>
-        <Link href={"/menu"} className="flex text-orange-500 font-bold items-center gap-2 cursor-pointer">
+        <Link href={"/menu"} className="flex text-orange-600 font-bold items-center gap-2 cursor-pointer">
           Full Menu <MoveRight />
+		  <span className="sr-only">see full menu</span>
         </Link>
         </div>
         {/* categories */}
@@ -33,8 +34,8 @@ const MenuSection = () => {
                 className={
                   `rounded-full! px-2 lg:px-8 border  transition-all
                   ${activeCategory === category.id
-                    ? 'bg-orange-500 text-white border-orange-500'
-                    : 'bg-white text-gray-600 border-gray-300 hover:border-orange-300 hover:text-orange-500'
+                    ? 'bg-orange-600 text-white border-orange-600'
+                    : 'bg-white text-gray-600 border-gray-300 hover:border-orange-300 hover:text-orange-600'
                 }
                   `
                 }
@@ -64,6 +65,7 @@ const MenuSection = () => {
         <MainButton ariaLabel={"menu"} className={" mt-8 border border-gray-300 hover:hover:bg-gray-50 px-10 "}>
           See Full Menu
         </MainButton>
+		<span className="sr-only">See Full Menu</span>
         </Link>
       </section>
     </>

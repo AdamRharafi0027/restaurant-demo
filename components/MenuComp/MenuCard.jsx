@@ -8,7 +8,7 @@ import { addToCart } from "@/ProductSlice/ProductSlice";
 
 const MenuCard = ({ image, title, description, price, product }) => {
   const ProductTags = {
-    POPULAR: "bg-orange-500 text-white",
+    POPULAR: "bg-orange-600 text-white",
     NEW: "bg-black text-white",
     HOT: "bg-red-500 text-white",
   };
@@ -39,7 +39,7 @@ const MenuCard = ({ image, title, description, price, product }) => {
       </div>
 
       <div className="p-4">
-        <h3 className="font-display font-bold text-brand-black text-base leading-snug cursor-pointer hover:text-orange-500 transition-colors">
+        <h3 className="font-display font-bold text-brand-black text-base leading-snug cursor-pointer hover:text-orange-600 transition-colors">
           {title}
         </h3>
         <p className="text-gray-500 text-xs mt-1 line-clamp-2 leading-relaxed font-body">
@@ -47,7 +47,7 @@ const MenuCard = ({ image, title, description, price, product }) => {
         </p>
 
         <div className="flex items-center justify-between mt-3">
-          <span className="font-display font-extrabold text-orange-500 text-lg">
+          <span className="font-display font-extrabold text-orange-600 text-lg">
             {price} MAD
           </span>
 
@@ -55,7 +55,7 @@ const MenuCard = ({ image, title, description, price, product }) => {
           onclick={()=>handleAddProduct(product)}
 		  ariaLabel={`Add ${title.slice(0,5)}to cart`}
           name={"add to cart"}
-          className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-display font-bold px-3 py-1.5 rounded transition-colors">
+          className="bg-orange-600 hover:bg-orange-600 text-white text-sm font-display font-bold px-3 py-1.5 rounded transition-colors">
             <PlusIcon />
           </MainButton>
         </div>

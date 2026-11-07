@@ -9,14 +9,14 @@ const HeroSection = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-[1fr_1fr] min-h-[88vh] md:min-h-[80vh]">
           {/* Left */}
           <div className="flex flex-col justify-center py-16 md:py-20 pr-0 md:pr-10 order-2 md:order-1 lg:mt-20">
-            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 text-xs font-display font-bold px-3 py-1.5 rounded-full mb-5 w-fit uppercase tracking-wide">
-              <span className="w-1.5 h-1.5 bg-orange-500 rounded-full" />
+            <div className="inline-flex items-center gap-2 bg-orange-50 text-orange-600 text-xs font-display font-bold px-3 py-1.5 rounded-full mb-5 w-fit uppercase tracking-wide">
+              <span className="w-1.5 h-1.5 bg-orange-600 rounded-full" />
               Now Open · Casablanca
             </div>
 
             <h1 className="font-display font-black text-brand-black text-5xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight mb-5">
               Big Flavor.<br />
-              <span className="text-orange-500">Made Fresh.</span>
+              <span className="text-orange-600">Made Fresh.</span>
             </h1>
 
             <p className="text-gray-600 font-body text-base sm:text-lg leading-relaxed mb-8 max-w-md">
@@ -27,10 +27,11 @@ const HeroSection = () => {
               <Link href={"/menu"}>
               <MainButton
 			  ariaLabel={"Order Button"}
-                className="bg-orange-500 hover:bg-orange-600 text-white font-display font-bold text-base px-6 py-3.5 rounded-lg transition-colors"
+                className="bg-orange-600 hover:bg-orange-600 text-white font-display font-bold text-base px-6 py-3.5 rounded-lg transition-colors"
               >
                 Order Now
               </MainButton>
+			  <span className="sr-only">order now</span>
               </Link>
               <Link href={"/menu"}>
               <MainButton
@@ -39,6 +40,7 @@ const HeroSection = () => {
               >
                 View Menu
               </MainButton>
+			  <span className="sr-only">View Menu</span>
               </Link>
             </div>
 

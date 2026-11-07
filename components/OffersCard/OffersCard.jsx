@@ -18,7 +18,7 @@ const OffersCard = ({id, image, name, tag, color, description, offerPrice, origi
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   <span className={`absolute top-3 right-3 text-xs font-display font-bold px-3 py-1 rounded ${
-                    color === 'red' ? 'bg-red-500 text-white' : 'bg-orange-500 text-white'
+                    color === 'red' ? 'bg-red-500 text-white' : 'bg-orange-600 text-white'
                   }`}>
                     {tag}
                   </span>
@@ -28,7 +28,7 @@ const OffersCard = ({id, image, name, tag, color, description, offerPrice, origi
                   <p className="text-gray-500 font-body text-sm mb-4">{description}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-baseline gap-2">
-                      <span className="font-display font-black text-orange-500 text-2xl">{offerPrice} MAD</span>
+                      <span className="font-display font-black text-orange-600 text-2xl">{offerPrice} MAD</span>
                       <span className="text-gray-400 font-body text-sm line-through">{originalPrice} MAD</span>
                     </div>
                     <MainButton
@@ -36,7 +36,7 @@ const OffersCard = ({id, image, name, tag, color, description, offerPrice, origi
                       className={`font-display font-bold text-sm px-4 py-2 rounded-lg transition-colors ${
                         color === 'red'
                           ? 'bg-red-500 hover:bg-red-700 text-white'
-                          : 'bg-orange-500 hover:bg-orange-600 text-white'
+                          : 'bg-orange-600 hover:bg-orange-600 text-white'
                       }`}
                     >
                       Order Now

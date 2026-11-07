@@ -38,14 +38,15 @@ const Header = () => {
       <header className="flex px-4 py-4 justify-between items-center fixed border-b border-gray-300 z-50 w-full bg-white lg:px-50">
         {/* LOGO */}
         <Link href={"/"} className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-orange-500 rounded-md flex items-center justify-center">
+          <div className="w-10 h-10 bg-orange-600 rounded-md flex items-center justify-center">
             <span className="text-white font-display font-black text-xl leading-none">
               BH
             </span>
           </div>
-          <span className="font-display font-extrabold text-brand-black text-xl tracking-tight group-hover:text-orange-500 transition-colors">
+          <span className="font-display font-extrabold text-brand-black text-xl tracking-tight group-hover:text-orange-600 transition-colors">
             BITE HOUSE
           </span>
+			<span className="sr-only">Logo</span>
         </Link>
         {
           // Mobile Menu
@@ -54,15 +55,16 @@ const Header = () => {
 			<ul>
           {NavLinks.map((link, index) => {
             return (
-              <li key={index} className=" p-3 rounded-sm hover:bg-gray-50 transition-all hover:text-orange-500">
+              <li key={index} className=" p-3 rounded-sm hover:bg-gray-50 transition-all hover:text-orange-600">
                 <Link href={link.href} onClick={(event) => handleNavClick(event, link)}>
                   {link.linkName}
+				  <span className="sr-only">{link.linkName}</span>
                 </Link>
               </li>
             );
 		})}
 		</ul>
-          <MainButton ariaLabel={"Order Button"} className={"bg-orange-500 text-white lg:absolute"}>
+          <MainButton ariaLabel={"Order Button"} className={"bg-orange-600 text-white lg:absolute"}>
             Order Now
           </MainButton>
         </nav>
@@ -72,18 +74,19 @@ const Header = () => {
         <nav className="hidden fixed bg-white inset-0 top-15 w-full h-115 lg:flex flex-col gap-3 px-3 py-5 lg:sticky lg:flex-row lg:h-auto lg:w-auto lg:p-0">
           {NavLinks.map((link, index) => {
             return (
-              <ul key={index} className="text-gray-600 p-3 rounded-sm hover:bg-gray-50 transition-all hover:text-orange-500">
+              <ul key={index} className="text-gray-600 p-3 rounded-sm hover:bg-gray-50 transition-all hover:text-orange-600">
                 <Link
                 href={link.href}
                 onClick={(event) => handleNavClick(event, link)}
-                className={`${link.href === pathname && "text-orange-500"}`}
+                className={`${link.href === pathname && "text-orange-600"}`}
                 >
                   {link.linkName}
+				  <span className="sr-only">{link.linkName}</span>
                 </Link>
               </ul>
             );
           })}
-          <MainButton ariaLabel={"Order Button"} className={"bg-orange-500 text-white lg:hidden hover:bg-orange-600"}>
+          <MainButton ariaLabel={"Order Button"} className={"bg-orange-600 text-white lg:hidden hover:bg-orange-600"}>
             Order Now
           </MainButton>
         </nav>
@@ -101,19 +104,21 @@ const Header = () => {
           {cartCount > 0 && (
             <span
               aria-hidden="true"
-              className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full border-2 border-white bg-orange-500 px-1 text-[10px] font-bold leading-none text-white"
+              className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full border-2 border-white bg-orange-600 px-1 text-[10px] font-bold leading-none text-white"
             >
               {cartCount}
             </span>
           )}
+		  <span className="sr-only">Cart</span>
         </Link>
         <button className="block lg:hidden" name="menu" onClick={() => setIsOpen(!isOpen)} aria-label="Menu Button">
           {isOpen ? <X /> : <Menu />}
         </button>
        <Link href={"/menu"}>
-        <MainButton ariaLabel={"Order Button"} className={"bg-orange-500 text-white hidden lg:block px-3 py-2! hover:bg-orange-600"}>
+        <MainButton ariaLabel={"Order Button"} className={"bg-orange-600 text-white hidden lg:block px-3 py-2! hover:bg-orange-600"}>
             Order Now
           </MainButton>
+		  <span className="sr-only">Order Now</span>
        </Link>
         </div>
       </header>

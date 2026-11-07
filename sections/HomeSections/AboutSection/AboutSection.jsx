@@ -8,7 +8,7 @@ const AboutSection = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-orange-500 font-display font-bold text-sm uppercase tracking-widest">Our Story</span>
+              <span className="text-orange-600 font-display font-bold text-sm uppercase tracking-widest">Our Story</span>
               <h2 className="font-display font-extrabold text-brand-black text-3xl sm:text-4xl mt-2 mb-5 leading-tight">
                 Real Food,<br />No Shortcuts.
               </h2>
@@ -47,7 +47,7 @@ const AboutSection = () => {
 				height={100}
 				className="w-150 h-auto rounded-xl object-cover sm:h-96"
               />
-              <div className="absolute -bottom-4 -left-4 bg-orange-500 text-white rounded-xl p-4 shadow-lg">
+              <div className="absolute -bottom-4 -left-4 bg-orange-600 text-white rounded-xl p-4 shadow-lg">
                 <div className="font-display font-black text-2xl leading-none">Since</div>
                 <div className="font-display font-black text-2xl leading-none">2021</div>
               </div>

@@ -86,7 +86,7 @@ const DisplayProduct = ({
                     className="flex items-center gap-2 p-3 rounded-lg border border-gray-200 bg-gray-50 hover:border-orange-300 hover:bg-orange-50 transition-colors text-left group"
                   >
                     <span className="text-xl">{category.icon}</span>
-                    <span className="font-display font-bold text-brand-black text-sm group-hover:text-orange-500 transition-colors">
+                    <span className="font-display font-bold text-brand-black text-sm group-hover:text-orange-600 transition-colors">
                       {category.label}
                     </span>
                   </button>

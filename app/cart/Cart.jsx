@@ -68,9 +68,10 @@ const handleAddComand = ()=> {
           </p>
           <Link
             href="/menu"
-            className="mt-8 inline-flex items-center gap-2 rounded-md bg-orange-500 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-orange-600"
+            className="mt-8 inline-flex items-center gap-2 rounded-md bg-orange-600 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-orange-600"
           >
             Browse the menu
+			<span className="sr-only">Browse the menu</span>
             <ArrowLeft className="rotate-180" size={16} aria-hidden="true" />
           </Link>
         </div>
@@ -180,6 +181,7 @@ const handleAddComand = ()=> {
             >
               <ArrowLeft size={16} aria-hidden="true" />
               Add more from the menu
+			  <span className="sr-only">Add more from the menu</span>
             </Link>
           </section>
 
@@ -219,6 +221,7 @@ const handleAddComand = ()=> {
               className="mt-3 flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-3 text-sm font-bold text-gray-800 transition-colors hover:bg-gray-100"
             >
               Continue shopping
+			  <span className="sr-only">Continue shopping</span>
             </Link>
             <p className="mt-4 text-center text-xs leading-5 text-gray-500">
               Your message will include these items and their total and Your number phone.

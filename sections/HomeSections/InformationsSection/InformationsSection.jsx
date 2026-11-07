@@ -6,7 +6,7 @@ const InformationsSection = () => {
      <section  id="locations" className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-10">
-            <span className="text-orange-500 font-display font-bold text-sm uppercase tracking-widest">Find Us</span>
+            <span className="text-orange-600 font-display font-bold text-sm uppercase tracking-widest">Find Us</span>
             <h2 className="font-display font-extrabold text-brand-black text-3xl sm:text-4xl mt-1">Location & Hours</h2>
           </div>
 
@@ -27,7 +27,7 @@ const InformationsSection = () => {
                       href="https://maps.google.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 text-sm font-display font-bold mt-2 transition-colors"
+                      className="inline-flex items-center gap-1 text-orange-600 hover:text-orange-600 text-sm font-display font-bold mt-2 transition-colors"
                     >
                       Get Directions →
                     </a>
@@ -55,7 +55,7 @@ const InformationsSection = () => {
                   <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-xl flex-shrink-0">📞</div>
                   <div>
                     <div className="font-display font-bold text-brand-black">Contact</div>
-                    <a href="tel:+212600000000" className="text-gray-600 font-body text-sm hover:text-orange-500 transition-colors block mt-1">
+                    <a href="tel:+212600000000" className="text-gray-600 font-body text-sm hover:text-orange-600 transition-colors block mt-1">
                       +212 600 000 000
                     </a>
                     <a
@@ -117,7 +117,7 @@ const InformationsSection = () => {
                   <MainButton
 				  ariaLabel={"Message"}
                     type="submit"
-                    className="w-full bg-orange-500 hover:bg-orange-600 text-white font-display font-bold py-3 rounded-lg transition-colors"
+                    className="w-full bg-orange-600 hover:bg-orange-600 text-white font-display font-bold py-3 rounded-lg transition-colors"
                   >
                     Send Message
                   </MainButton>

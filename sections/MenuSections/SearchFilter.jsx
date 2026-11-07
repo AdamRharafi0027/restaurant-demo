@@ -32,8 +32,8 @@ const SearchFilter = ({
               onClick={() => setActiveCategory(cat.id)}
               className={`rounded-full px-2 lg:px-5 border lg:text-[15px] transition-all ${
                 activeCategory === cat.id
-                  ? "bg-orange-500 text-white border-orange-500"
-                  : "bg-white text-gray-600 border-gray-300 hover:border-orange-300 hover:text-orange-500"
+                  ? "bg-orange-600 text-white border-orange-600"
+                  : "bg-white text-gray-600 border-gray-300 hover:border-orange-300 hover:text-orange-600"
               }`}
             >
               <span>{cat.icon}</span> {cat.label}
