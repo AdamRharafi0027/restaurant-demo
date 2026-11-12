@@ -27,7 +27,7 @@ const Cart = () => {
   //   `Hello Bite House, I'd like to order:\n${orderDetails}\n\nItems total: ${formatPrice(subtotal)}`,
   // )}`;
   // ===== ADDED =====
-  const [userNumber, setUserNumber] = useState('0774976532');
+//   const [userNumber, setUserNumber] = useState('0774976532');
   // ==========
   const whatsappUrl = `https://wa.me/212774976532?text=${encodeURIComponent(
   `🍔 *New Order – Bite House*
@@ -41,10 +41,10 @@ ${orderDetails}
 💰 *Items total:* ${formatPrice(subtotal)}
 
 Please confirm my order and let me know the estimated preparation time.
-${userNumber !== null ?  ("Number : " + userNumber) : ("")}
 
 Thank you! 🙏`
 )}`;
+// ${userNumber !== null ?  ("Number : " + userNumber) : ("")}
 
 const handleAddComand = ()=> {
   alert("command");
@@ -109,6 +109,8 @@ const handleAddComand = ()=> {
                   <Image
                     src={item.image}
                     alt={item.title}
+					width={96}
+                    height={96}
                     className="h-24 w-24 shrink-0 rounded-md bg-gray-200 object-cover sm:h-28 sm:w-28"
                   />
                   <div className="flex min-w-0 flex-1 flex-col justify-between gap-4 sm:flex-row sm:items-center">
@@ -208,14 +210,15 @@ const handleAddComand = ()=> {
               </div>
             </div>
 
-            <a
-              href={()=>handleAddComand()} // whatsappUrl
+
+            <Link
+              href={whatsappUrl} // whatsappUrl
               target="_blank"
               rel="noopener noreferrer"
               className="mt-5 flex w-full items-center justify-center rounded-md bg-green-600 px-4 py-3.5 text-sm font-bold text-white transition-colors hover:bg-green-700"
             >
               Order on WhatsApp
-            </a>
+            </Link>
             <Link
               href="/menu"
               className="mt-3 flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-3 text-sm font-bold text-gray-800 transition-colors hover:bg-gray-100"
