@@ -46,9 +46,9 @@ Thank you! 🙏`
 )}`;
 // ${userNumber !== null ?  ("Number : " + userNumber) : ("")}
 
-const handleAddComand = ()=> {
-  alert("command");
-}
+// const handleAddComand = ()=> {
+//   alert("command");
+// }
 
   if (items.length === 0) {
     return (
